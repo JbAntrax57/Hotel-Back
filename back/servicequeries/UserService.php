@@ -6,7 +6,4 @@ class UserService extends Service {
         parent::__construct($composer);
         $this->composer = $composer;
     }
-    public function add_account ($params) {
-        return $this->composer->add_account($params);
-    }
 }
