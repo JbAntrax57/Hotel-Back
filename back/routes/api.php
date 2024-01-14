@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\sys\UsersController;
+use App\Http\Controllers\TypesController;
+use App\Http\Controllers\RoomsController;
 use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 /*
@@ -30,6 +32,21 @@ Route::controller(UsersController::class)->group(function () {
     Route::post('/users', 'create');
     Route::post('/users/{id}', 'update');
     Route::delete('/users/{id}', 'delete');
+});
+
+Route::controller(TypesController::class)->group(function () {
+    Route::get('/types', 'getAll');
+    Route::post('/types', 'create');
+    Route::post('/types/{id}', 'update');
+    Route::delete('/types/{id}', 'delete');
+    Route::get('/types/getOptions', 'getOptions');
+});
+
+Route::controller(RoomsController::class)->group(function () {
+    Route::get('/rooms', 'getAll');
+    Route::post('/rooms', 'create');
+    Route::post('/rooms/{id}', 'update');
+    Route::delete('/rooms/{id}', 'delete');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

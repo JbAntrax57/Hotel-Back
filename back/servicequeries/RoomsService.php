@@ -1,6 +1,6 @@
 <?php
 namespace ServiceQueries;
-class SubcategoriesService extends Service {
+class RoomsService extends Service {
     private $composer;
     public function __construct($composer) {
         parent::__construct($composer);

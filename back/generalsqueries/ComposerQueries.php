@@ -39,6 +39,7 @@ class ComposerQueries {
     }
 
     public function update ($id, $data) {
+        
         try {
             $update = $this->model::where('id', $id)->update($data);
             if ($update) {
