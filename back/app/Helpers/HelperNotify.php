@@ -9,14 +9,14 @@ class HelperNotify
             'success' => [
                 'message' => $message,
                 'color' => 'positive',
-                'position' => 'top-right',
+                'position' => 'top',
                 'icon' => 'check',
                 'timeout' => 3000,
             ],
             'error' => [
                 'message' => $message,
                 'color' => 'warning',
-                'position' => 'top-right',
+                'position' => 'top',
                 'icon' => 'check',
                 'timeout' => 3000,
             ],
@@ -24,7 +24,7 @@ class HelperNotify
                 'message' => $message,
                 'color' => 'red-6',
                 'avatar' => 'https://cdn.quasar.dev/img/boy-avatar.png',
-                'position' => 'top-right',
+                'position' => 'top',
                 'timeout' => 5000
             ]
         ];

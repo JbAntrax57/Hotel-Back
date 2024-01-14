@@ -1,6 +1,6 @@
 <?php
 namespace GeneralsQueries;
-// use App\Helpers\HelperNotify;
+use App\Helpers\HelperNotify;
 use Illuminate\Support\Facades\Log;
 
 class ComposerQueries {
