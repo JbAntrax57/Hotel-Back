@@ -42,4 +42,12 @@ class RoomsController extends Controller
         $service = $this->service($view)->pagination_model([], $arreglo);
         return response()->json($service);
     }
+
+    public function getOptions (Request $request) {
+        $arreglo = $request->all();
+       //$view = new ViewCategoriesAccoutsOptions();
+        $service = $this->service()
+        ->pagination_model(['id as value', 'name as label'], []);
+        return response()->json($service);
+    }
 }

@@ -6,6 +6,7 @@ use \App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\sys\UsersController;
 use App\Http\Controllers\TypesController;
 use App\Http\Controllers\RoomsController;
+use App\Http\Controllers\PriceRoomsController;
 use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 /*
@@ -47,6 +48,14 @@ Route::controller(RoomsController::class)->group(function () {
     Route::post('/rooms', 'create');
     Route::post('/rooms/{id}', 'update');
     Route::delete('/rooms/{id}', 'delete');
+    Route::get('/rooms/getOptions', 'getOptions');
+});
+
+Route::controller(PriceRoomsController::class)->group(function () {
+    Route::get('/priceRooms', 'getAll');
+    Route::post('/priceRooms', 'create');
+    Route::post('/priceRooms/{id}', 'update');
+    Route::delete('/priceRooms/{id}', 'delete');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
